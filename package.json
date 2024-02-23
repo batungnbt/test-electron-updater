@@ -1,0 +1,30 @@
+{
+  "name": "testupdater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "publish": "electron-builder --publish always"
+  },
+  "build": {
+    "appId": "update.test",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "batungnbt",
+        "repo": "test-electron-updater"
+      }
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.12.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
